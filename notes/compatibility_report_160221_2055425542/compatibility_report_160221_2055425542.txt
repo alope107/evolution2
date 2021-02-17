@@ -1,0 +1,40 @@
+Converting GML script: ${project_dir}\scripts\clicked_chaser\clicked_chaser.gml
+Error: variable 'variable_instance_exists' has same name as a built-in (function, constant or variable), it must be renamed to function correctly
+
+Converting GML script: ${project_dir}\objects\camera_obj\Create_0.gml
+Converted builtin - line 5: view_wview[0] = room_width -> __view_set( e__VW.WView, 0, room_width )
+Converted builtin - line 6: view_hview[0] = room_height -> __view_set( e__VW.HView, 0, room_height )
+Converted builtin - line 8: view_visible[0] = true -> __view_set( e__VW.Visible, 0, true )
+
+Converting GML script: ${project_dir}\objects\camera_obj\Keyboard_50.gml
+Converted builtin - line 3: view_wview[0] = floor(room_width * scale) -> __view_set( e__VW.WView, 0, floor(room_width * scale) )
+Converted builtin - line 4: view_hview[0] = floor(room_height * scale) -> __view_set( e__VW.HView, 0, floor(room_height * scale) )
+Converted builtin - line 5: view_hborder[0] = floor(room_width * scale * borderFrac) -> __view_set( e__VW.HBorder, 0, floor(room_width * scale * borderFrac) )
+Converted builtin - line 6: view_vborder[0] = floor(room_height * scale * borderFrac) -> __view_set( e__VW.VBorder, 0, floor(room_height * scale * borderFrac) )
+
+Converting GML script: ${project_dir}\objects\camera_obj\Keyboard_49.gml
+Converted builtin - line 3: view_wview[0] = floor(room_width * scale) -> __view_set( e__VW.WView, 0, floor(room_width * scale) )
+Converted builtin - line 4: view_hview[0] = floor(room_height * scale) -> __view_set( e__VW.HView, 0, floor(room_height * scale) )
+Converted builtin - line 5: view_hborder[0] = 3000000 -> __view_set( e__VW.HBorder, 0, 3000000 )
+Converted builtin - line 6: view_vborder[0] = 3000000 -> __view_set( e__VW.VBorder, 0, 3000000 )
+
+Converting GML script: ${project_dir}\objects\camera_obj\KeyPress_67.gml
+Converted builtin - line 3: view_wview[0] = room_width -> __view_set( e__VW.WView, 0, room_width )
+Converted builtin - line 8: view_wview[0] = floor(room_width * scale) -> __view_set( e__VW.WView, 0, floor(room_width * scale) )
+Converted builtin - line 4: view_hview[0] = room_height -> __view_set( e__VW.HView, 0, room_height )
+Converted builtin - line 9: view_hview[0] = floor(room_height * scale) -> __view_set( e__VW.HView, 0, floor(room_height * scale) )
+
+macOS icon ${options_dir}\mac\icons\icon512.png written out as 32-bit
+Windows NSIS Installer Script has been set to default due to changes in GameMaker Studio 2
+Game speed set to 30
+Added compatibility script 'action/action_current_room.gml'
+Added compatibility script 'action/action_end_game.gml'
+Added compatibility script 'instance/instance_create.gml'
+Added compatibility script 'object/object_get_depth.gml'
+Added compatibility script 'view/__view_set.gml'
+Added compatibility script 'view/__view_set_internal.gml'
+Added compatibility script 'action/__init_action.gml'
+Added compatibility script 'view/__init_view.gml'
+Added compatibility script '__init_global.gml'
+Added compatibility script 'view/__view_get.gml'
+Added compatibility script '__global_object_depths.gml'

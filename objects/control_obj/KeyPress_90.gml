@@ -1,0 +1,2 @@
+global.cannibals = !global.cannibals;
+
