@@ -39,7 +39,7 @@ if (!is_scrolling) {
 		if (abs(dist - last_dist) > 10) {
 			// HEURISTIC
 			// Idk how to properly scale
-			dist_scale = power(dist/old_dist, .03)
+			dist_scale = power(old_dist/dist, .03)
 			camera_set_view_size(view_camera[0], w_view * dist_scale, h_view*dist_scale)
 		}
 	} else { // no longer both touching, end scroll
