@@ -1,6 +1,6 @@
 /** 
  * @function relative_to_absolute
- * @return array of point scaled from screen position to room_position
+ * @return array of point scaled from screen position to room position
 */
 function relative_to_absolute(point, camera_index, port_index){
 	var _camera_pos, _view_scale
