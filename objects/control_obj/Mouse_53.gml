@@ -4,7 +4,7 @@ if (clicked != -1) {
         chosen = false;
     }
     (clicked).chosen = true;
-    (camera_obj).target = clicked;
+    //(camera_obj).target = clicked;
 }
 else {
     instance_create(mouse_x, mouse_y, chaser_obj);
