@@ -28,7 +28,7 @@ if (initialized) {
     rel_dir = dir + phy_rotation;
     // If it is sufficiently far away, swim as fast as possible.
     // If it is close to the target, ease up so as not to overshoot.
-    swim_strength = min(m[? "max_swim_strength"], dist * m[? "eagerness"]);
+    swim_strength = min(m.max_swim_strength, dist * m.eagerness);
     
     if(instance_number(food_obj) == 0) {
         swim_strength = 0;
@@ -36,20 +36,20 @@ if (initialized) {
     
     dx = dcos(rel_dir) * swim_strength;
     dx = max(dx, 0);
-    dy = dsin(rel_dir) * m[? "max_steering_strength"];
+    dy = dsin(rel_dir) * m.max_steering_strength;
     
     // Manual control
     if (chosen && global.controlling) {
         dx = 0;
         dy = 0;
         if (keyboard_check(vk_up)) {
-            dx = m[? "max_swim_strength"];
+            dx = m.max_swim_strength;
         }
         if ( keyboard_check(vk_left) && ! keyboard_check(vk_right)) {
-            dy = m[? "max_steering_strength"];
+            dy = m.max_steering_strength;
         }
         if ( keyboard_check(vk_right) && ! keyboard_check(vk_left)) {
-            dy = -1 * m[? "max_steering_strength"];
+            dy = -1 * m.max_steering_strength;
         }
     }
     
@@ -72,20 +72,20 @@ if (initialized) {
     // As it starves, its alpha goes to zero.
     // Alpha is scaled on starting energy, anything above starting energy
     // has alpha of 1.
-    image_alpha = min(1, energy/m[? "starting_energy"]);
+    image_alpha = min(1, energy/m.starting_energy);
     
     if (energy > birthing_threshold) {
         child = instance_create(x, y, chaser_obj);
         child.isChild = true;
         child.m = base_phenotype();
-        child.m[? "max_swim_strength"] = m[? "max_swim_strength"] + rand_norm(0, m[? "max_swim_strength"]/3);
-        child.m[? "max_steering_strength"] = m[? "max_steering_strength"] + rand_norm(0, m[? "max_steering_strength"]/3);
-        child.m[? "eagerness"]  = m[? "eagerness"] + rand_norm(0, m[? "eagerness"]/3);
-        child.m[? "color_pref"] = m[? "color_pref"] + rand_norm(0, m[? "color_pref"]/3);
-        child.m[? "wall_discouragement"] = m[? "wall_discouragement"] + rand_norm(0, m[? "wall_discouragement"]/3);
+        child.m.max_swim_strength = m.max_swim_strength + rand_norm(0, m.max_swim_strength/3);
+        child.m.max_steering_strength = m.max_steering_strength + rand_norm(0, m.max_steering_strength/3);
+        child.m.eagerness  = m.eagerness + rand_norm(0, m.eagerness/3);
+        child.m.color_pref = m.color_pref + rand_norm(0, m.color_pref/3);
+        child.m.wall_discouragement = m.wall_discouragement + rand_norm(0, m.wall_discouragement/3);
         
-        child.m[? "eye_white_scale"] = m[? "eye_white_scale"] + rand_norm(0, m[? "eye_white_scale"]/10);
-        child.m[? "pupil_scale"] = m[? "pupil_scale"] + rand_norm(0, m[? "pupil_scale"]/10);
+        child.m.eye_white_scale = m.eye_white_scale + rand_norm(0, m.eye_white_scale/10);
+        child.m.pupil_scale = m.pupil_scale + rand_norm(0, m.pupil_scale/10);
         
         child.body_coord = mutate_triangle(body_coord, 9, 15);
         

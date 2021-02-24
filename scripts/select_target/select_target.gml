@@ -31,11 +31,11 @@ function select_target() {
 	        }
         
 	        dist = point_distance(x, y, target.x, target.y);
-	        color_des = m[? "color_pref"] * color_similarity(self, target);
+	        color_des = m.color_pref * color_similarity(self, target);
 	        desirability = (-1 * dist) + color_des;
         
 	        if (collision_line(x, y, target.x, target.y, wall_obj, false, true)) {
-	            desirability -= m[? "wall_discouragement"];
+	            desirability -= m.wall_discouragement;
 	        }
 	        if (desirability > max_desirability) {
 	            max_desirability = desirability;

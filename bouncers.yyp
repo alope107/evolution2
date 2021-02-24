@@ -102,8 +102,8 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"zoomable_camera_tank","path":"rooms/zoomable_camera_tank/zoomable_camera_tank.yy",},},
-    {"roomId":{"name":"resizable","path":"rooms/resizable/resizable.yy",},},
     {"roomId":{"name":"giant_camera_tank","path":"rooms/giant_camera_tank/giant_camera_tank.yy",},},
+    {"roomId":{"name":"resizable","path":"rooms/resizable/resizable.yy",},},
     {"roomId":{"name":"camera_tank","path":"rooms/camera_tank/camera_tank.yy",},},
     {"roomId":{"name":"fish_tank","path":"rooms/fish_tank/fish_tank.yy",},},
     {"roomId":{"name":"diffusion_test","path":"rooms/diffusion_test/diffusion_test.yy",},},
