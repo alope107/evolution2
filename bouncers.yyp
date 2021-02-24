@@ -79,6 +79,7 @@
     {"id":{"name":"resizable","path":"rooms/resizable/resizable.yy",},"order":12,},
     {"id":{"name":"fish_tank","path":"rooms/fish_tank/fish_tank.yy",},"order":3,},
     {"id":{"name":"giant_camera_tank","path":"rooms/giant_camera_tank/giant_camera_tank.yy",},"order":5,},
+    {"id":{"name":"zoomable_camera_tank","path":"rooms/zoomable_camera_tank/zoomable_camera_tank.yy",},"order":13,},
     {"id":{"name":"diffusion_test","path":"rooms/diffusion_test/diffusion_test.yy",},"order":7,},
     {"id":{"name":"big_tank","path":"rooms/big_tank/big_tank.yy",},"order":9,},
     {"id":{"name":"debugger","path":"rooms/debugger/debugger.yy",},"order":11,},
@@ -100,6 +101,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"zoomable_camera_tank","path":"rooms/zoomable_camera_tank/zoomable_camera_tank.yy",},},
     {"roomId":{"name":"resizable","path":"rooms/resizable/resizable.yy",},},
     {"roomId":{"name":"giant_camera_tank","path":"rooms/giant_camera_tank/giant_camera_tank.yy",},},
     {"roomId":{"name":"camera_tank","path":"rooms/camera_tank/camera_tank.yy",},},

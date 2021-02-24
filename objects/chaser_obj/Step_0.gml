@@ -34,9 +34,9 @@ if (initialized) {
         swim_strength = 0;
     }
     
-    dx = cos(degtorad(rel_dir)) * swim_strength;
+    dx = dcos(rel_dir) * swim_strength;
     dx = max(dx, 0);
-    dy = sin(degtorad(rel_dir)) * m[? "max_steering_strength"];
+    dy = dsin(rel_dir) * m[? "max_steering_strength"];
     
     // Manual control
     if (chosen && global.controlling) {
