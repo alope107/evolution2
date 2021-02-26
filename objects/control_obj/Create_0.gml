@@ -2,11 +2,10 @@ randomize();
 
 physics_world_update_speed(room_speed);
 
-interval = 300;
+interval = 200;
 timer = interval;
 
 // TEST FLAGS
-global.fixture_experiment = true;
 global.cannibals = false;
 global.controlling = false;
 global.max_vertices = 5;

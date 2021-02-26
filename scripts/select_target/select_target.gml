@@ -26,7 +26,7 @@ function select_target() {
 	            // If we're going to be concerned with a creature, it should be 
 	            // initialized and either small enough to eat or big enough to eat us.
 	            if (!cur_target.initialized ||
-	                !(cur_target.area < area/2 || cur_target.area > area * 2))
+	                !(can_cannibalize(self, cur_target) || can_cannibalize(cur_target, self)))
 	                {
 	                    continue;
 	                }
@@ -44,7 +44,7 @@ function select_target() {
 	            max_desirability = desirability;
 	            best_target = cur_target;
 	            // Whether we're in fear for our life.
-	            afraid = (targets[i] == chaser_obj && cur_target.area > area * 2);
+	            afraid = (targets[i] == chaser_obj && can_cannibalize(cur_target, self));
 	        }
 	    }
 	}

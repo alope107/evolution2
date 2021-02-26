@@ -1,12 +1,12 @@
 //ugly hack plz resolve
 if (initialized && other.initialized && global.cannibals) {
-    // Get more energy from similarly colored food.
     
-    if (other.area < area/2) {
+    if (can_cannibalize(self, other)) {
+		// TODO: More energy from similarly colored?
         energy += other.energy;
     }
     
-    if (area < other.area/2) {
+    if (can_cannibalize(other, self)) {
         to_destroy = true;
     }
     
