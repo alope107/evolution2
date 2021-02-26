@@ -7,6 +7,7 @@
     {"id":{"name":"chaser_2_spr","path":"sprites/chaser_2_spr/chaser_2_spr.yy",},"order":7,},
     {"id":{"name":"tail_spr_old","path":"sprites/tail_spr_old/tail_spr_old.yy",},"order":9,},
     {"id":{"name":"tail_spr","path":"sprites/tail_spr/tail_spr.yy",},"order":11,},
+    {"id":{"name":"chaser_fix","path":"scripts/chaser_fix/chaser_fix.yy",},"order":9,},
     {"id":{"name":"feeder_spr","path":"sprites/feeder_spr/feeder_spr.yy",},"order":13,},
     {"id":{"name":"pixel_spr","path":"sprites/pixel_spr/pixel_spr.yy",},"order":15,},
     {"id":{"name":"camera_spr","path":"sprites/camera_spr/camera_spr.yy",},"order":17,},

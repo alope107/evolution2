@@ -13,15 +13,16 @@ if (!isChild && !initialized) {
 }
 
 if (!initialized) {
-	fix = create_polygon_fix(body_coord);
+	//fix = create_polygon_fix(body_coord);
     
-	physics_fixture_set_density(fix, .3)//.5);
-	physics_fixture_set_restitution(fix, 1);
-	physics_fixture_set_collision_group(fix, 0);
-	physics_fixture_set_linear_damping(fix, 1.2);
-	physics_fixture_set_angular_damping(fix, .5);
-	physics_fixture_set_friction(fix, .01);
-
+	//physics_fixture_set_density(fix, .3);
+	//physics_fixture_set_restitution(fix, 1);
+	//physics_fixture_set_collision_group(fix, 0);
+	//physics_fixture_set_linear_damping(fix, 1.2);
+	//physics_fixture_set_angular_damping(fix, .5);
+	//physics_fixture_set_friction(fix, .01);
+	
+	var fix = create_chaser_fix(body_coord);
 	bound_fix = physics_fixture_bind(fix, self);
 	physics_fixture_delete(fix);
 
