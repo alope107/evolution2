@@ -36,8 +36,7 @@ function LRUCache(_capacity) constructor {
 			throw "Missing item in LRUCache: " + string(_key);
 		}
 		entry = map[? _key];
-		// TODO: Re-enable?
-		//queue.move_to_front(entry.node);
+		queue.move_to_front(entry.node);
 		return entry.val;
 	}
 	
