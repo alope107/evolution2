@@ -1,9 +1,7 @@
-function sort_clockwise_and_center(argument0) {
+function sort_clockwise(in_points, center) {
 	// Takes an array of x/y points, translates them so that the centroid
 	// is at the origin and returns them sorted in clockwise order.
-	var in_points, t_idx, x_idx, y_idx, num_points, poly, trans_x, trans_y;
-
-	in_points = argument0;
+	var t_idx, x_idx, y_idx, num_points, poly, trans_x, trans_y;
 
 	num_points = array_height_2d(in_points);
 
@@ -40,8 +38,13 @@ function sort_clockwise_and_center(argument0) {
 	// Add points to fixture in clockwise order.
 	for (i = 0; i < num_points; i++) {
 	    // Translate the points so the centroid is at the origin.
-	    trans_x = ds_grid_get(points, x_idx, i) - centroid[0];
-	    trans_y = ds_grid_get(points, y_idx, i) - centroid[1];
+		
+	    trans_x = ds_grid_get(points, x_idx, i); 
+	    trans_y = ds_grid_get(points, y_idx, i);
+		if (center) {
+			trans_x -= centroid[0];
+			trans_y -= centroid[1];
+		}
 	    poly[i, 0] = trans_x;
 	    poly[i, 1] = trans_y;
 	}

@@ -67,14 +67,4 @@ if (initialized) {
     if (global.draw_area) {
         draw_text(x, y + 20, string_hash_to_newline(string(area)));
     }
-    
-    /*if (chosen) {
-        draw_set_color(c_red);
-        draw_text(x, y + 20, "ME");
-        draw_set_color(c_white);
-    }*/
-   // draw_text(x, y - 20, string(wall_discouragement));
 }
-
-/* */
-/*  */

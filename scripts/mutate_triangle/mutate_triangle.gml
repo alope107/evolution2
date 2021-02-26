@@ -25,7 +25,7 @@ function mutate_triangle(argument0, argument1, argument2) {
 	    }
 	}
 
-	mut_triangle = sort_clockwise_and_center(mut_triangle);
+	mut_triangle = sort_clockwise(mut_triangle, true);
 
 	return mut_triangle;
 

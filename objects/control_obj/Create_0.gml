@@ -9,6 +9,7 @@ timer = interval;
 global.fixture_experiment = true;
 global.cannibals = false;
 global.controlling = false;
+global.max_vertices = 5;
 
 // DEBUG FLAGS
 global.draw_physics = false;

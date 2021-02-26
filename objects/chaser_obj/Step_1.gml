@@ -5,13 +5,14 @@ if (!isChild && !initialized) {
     
     perturb = true;
     if (perturb) {
-        m.max_swim_strength  += rand_norm(0, m.max_swim_strength/2);
-		m.max_steering_strength  += rand_norm(0, m.max_steering_strength/2);
-		m.eagerness  += rand_norm(0, m.eagerness/2);
-		m.color_pref += rand_norm(0, m.color_pref/2);
-		m.wall_discouragement += rand_norm(0, m.wall_discouragement/2);
-		m.eye_white_scale += rand_norm(0, m.eye_white_scale/3);
-		m.pupil_scale += rand_norm(0, m.pupil_scale/3);
+        //m.max_swim_strength  += rand_norm(0, m.max_swim_strength/2);
+		//m.max_steering_strength  += rand_norm(0, m.max_steering_strength/2);
+		//m.eagerness  += rand_norm(0, m.eagerness/2);
+		//m.color_pref += rand_norm(0, m.color_pref/2);
+		//m.wall_discouragement += rand_norm(0, m.wall_discouragement/2);
+		//m.eye_white_scale += rand_norm(0, m.eye_white_scale/3);
+		//m.pupil_scale += rand_norm(0, m.pupil_scale/3);
+		m = perturb_genome(m, base_perturb_scale(), base_bounds())
     }
     
     // RGB components of its color.

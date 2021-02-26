@@ -6,7 +6,7 @@
     "path": "folders/Scripts/geometry.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sort_clockwise_and_center",
+  "name": "sort_clockwise",
   "tags": [],
   "resourceType": "GMScript",
 }

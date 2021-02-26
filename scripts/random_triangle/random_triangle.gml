@@ -21,7 +21,6 @@ function random_triangle() {
 	    for (i = 0; i < num_points; i++) {
 	        for (j = 0; j < 2; j++) {
 	            // Set the cartesian points.
-	            //pts[i, j] = scale - random(2 * scale);
 	            pts[i, j] = scale + rand_norm(0, scale);
 	        }
 	    }
@@ -33,8 +32,5 @@ function random_triangle() {
 	    }
 	}
 
-	return sort_clockwise_and_center(pts);
-
-
-
+	return sort_clockwise(pts, true);
 }
