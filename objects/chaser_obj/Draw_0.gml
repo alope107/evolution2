@@ -38,14 +38,18 @@ if (initialized) {
                         x + rotated_body[2, 0], y + rotated_body[2, 1], 3);
         draw_line_width(x + rotated_body[2, 0], y + rotated_body[2, 1], 
                         x + rotated_body[1, 0], y + rotated_body[1, 1], 3);
-    }
-                  
+    }             
    
     // Draw eye.
     pupil_offset[0] = white_radius - pupil_radius;
     pupil_offset[1] = 0;
     white_offset = triangle_incenter(rotated_body, side_lengths);
-    pupil_dir = point_direction(x + white_offset[0], y + white_offset[1], target_x, target_y)
+	look_coords = target_coords
+	// If we're afraid, look back at what we're afraid of instead of where we're going
+	if (target_info.afraidOf) {
+		look_coords = mirror_point([x, y], look_coords);
+	}
+    pupil_dir = point_direction(x + white_offset[0], y + white_offset[1], look_coords[0], look_coords[1]);
     pupil_offset = rotate_point(pupil_offset[0], pupil_offset[1], -pupil_dir);
     
     
@@ -59,8 +63,12 @@ if (initialized) {
     
     draw_set_color(c_white);
     if (global.draw_desire) {
-        draw_line(x, y, target_x, target_y);
+		if(target_info.afraidOf) {
+			draw_set_color(c_green);
+		}
+        draw_line(x, y, target_coords[0], target_coords[1]);
     }
+	draw_set_color(c_white);
     if (global.draw_generation) {
         draw_text(x, y - 20, string_hash_to_newline(string(gen)));
     }

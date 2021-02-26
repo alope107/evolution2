@@ -1,33 +1,38 @@
 if (initialized) { 
-    // Set desirability SO LOW that no one could ever want it.
-    max_desirability = -9999999;
-    
     reselect += 1;
     
     if (reselect > reselect_limit) {
-        target = select_target();
+        target_info = select_target();
         reselect = 0;
     }
     
-    if (target == -2 || (target != -1 && !instance_exists(target))) {
-        target = select_target();
+	// Select a target if we've never selected one before or
+	// if our previous target no longer exists
+    if (target == -2 || (target_info.found && !instance_exists(target))) {
+        target_info = select_target();
     }
+	
+	target = target_info.target
     
-    if (target == -1) {
-        target_x = 0;
-        target_y = 0;
+	// Currently just sets target coords to 0,0 if no viable target
+	// TODO: Don't move if no target?
+    if (!target_info.found) {
+        target_coords = [0, 0];
     }
     else {
-        target_x = (target).x;
-        target_y = (target).y;
+        target_coords = [target.x, target.y];
+		if (target_info.afraidOf) {
+			target_coords = mirror_point([x, y], target_coords);
+		}
     }
     
-    dir = point_direction(x, y, target_x, target_y);
-    dist = point_distance(x, y, target_x, target_y);
+    dir = point_direction(x, y, target_coords[0], target_coords[1]);
+    dist = point_distance(x, y, target_coords[0], target_coords[1]);
     
     rel_dir = dir + phy_rotation;
     // If it is sufficiently far away, swim as fast as possible.
     // If it is close to the target, ease up so as not to overshoot.
+	// TODO: Change logic if afraid?
     swim_strength = min(m.max_swim_strength, dist * m.eagerness);
     
     if(instance_number(food_obj) == 0) {
