@@ -6,7 +6,7 @@
     "path": "folders/Scripts/genome.yy",
   },
   "resourceVersion": "1.0",
-  "name": "base_phenotype",
+  "name": "genome_params",
   "tags": [],
   "resourceType": "GMScript",
 }

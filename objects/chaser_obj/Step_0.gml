@@ -77,15 +77,8 @@ if (initialized) {
     if (energy > birthing_threshold) {
         child = instance_create(x, y, chaser_obj);
         child.isChild = true;
-        child.m = base_phenotype();
-        child.m.max_swim_strength = m.max_swim_strength + rand_norm(0, m.max_swim_strength/3);
-        child.m.max_steering_strength = m.max_steering_strength + rand_norm(0, m.max_steering_strength/3);
-        child.m.eagerness  = m.eagerness + rand_norm(0, m.eagerness/3);
-        child.m.color_pref = m.color_pref + rand_norm(0, m.color_pref/3);
-        child.m.wall_discouragement = m.wall_discouragement + rand_norm(0, m.wall_discouragement/3);
-        
-        child.m.eye_white_scale = m.eye_white_scale + rand_norm(0, m.eye_white_scale/10);
-        child.m.pupil_scale = m.pupil_scale + rand_norm(0, m.pupil_scale/10);
+
+		child.m = perturb_genome(m, child_perturb_scale(), child_bounds());
         
         child.body_coord = mutate_triangle(body_coord, 9, 15);
         

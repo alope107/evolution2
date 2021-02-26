@@ -1,3 +1,7 @@
+// TODO: store these in global variables instead of re-creating each time?
+// TODO: load these from JSON files?
+
+
 function base_phenotype() {
 	// Creates an object with the default phenotype values.	
 	return {
@@ -41,6 +45,23 @@ function base_perturb_scale() {
 	}
 }
 
+// How much to vary values by for children
+// Higher values indicate higher variation
+function child_perturb_scale() {
+	return {
+		max_swim_strength: .333,
+		max_steering_strength: .333,
+		eagerness: .333,
+		// No variation
+		starting_energy: 0.0,
+		color_pref: .333,
+		wall_discouragement: .333,
+		eye_white_scale: .1,
+		pupil_scale: .1,
+		vertices: .333, 
+	}
+}
+
 function base_bounds() {
 	return {
 		max_swim_strength: {minimum: -10000000, maximum: 10000000},
@@ -53,4 +74,9 @@ function base_bounds() {
 		pupil_scale: {minimum: -10000000, maximum: 10000000},
 		vertices: {minimum: -10000000, maximum: 10000000}, 
 	}
+}
+
+function child_bounds() {
+	// TODO: different bounds for children?
+	return base_bounds();
 }

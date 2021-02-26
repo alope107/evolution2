@@ -19,7 +19,7 @@
     {"id":{"name":"rand_norm","path":"scripts/rand_norm/rand_norm.yy",},"order":1,},
     {"id":{"name":"color_similarity","path":"scripts/color_similarity/color_similarity.yy",},"order":3,},
     {"id":{"name":"normalize_degrees","path":"scripts/normalize_degrees/normalize_degrees.yy",},"order":5,},
-    {"id":{"name":"base_phenotype","path":"scripts/base_phenotype/base_phenotype.yy",},"order":1,},
+    {"id":{"name":"genome_params","path":"scripts/genome_params/genome_params.yy",},"order":1,},
     {"id":{"name":"draw_rectangle_fast","path":"scripts/draw_rectangle_fast/draw_rectangle_fast.yy",},"order":1,},
     {"id":{"name":"rotate_point","path":"scripts/rotate_point/rotate_point.yy",},"order":1,},
     {"id":{"name":"sort_clockwise","path":"scripts/sort_clockwise/sort_clockwise.yy",},"order":3,},

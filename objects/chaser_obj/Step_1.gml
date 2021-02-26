@@ -1,19 +1,7 @@
 if (!isChild && !initialized) {
-    m = base_phenotype();
-    
     body_coord = random_triangle(32, 15);
-    
-    perturb = true;
-    if (perturb) {
-        //m.max_swim_strength  += rand_norm(0, m.max_swim_strength/2);
-		//m.max_steering_strength  += rand_norm(0, m.max_steering_strength/2);
-		//m.eagerness  += rand_norm(0, m.eagerness/2);
-		//m.color_pref += rand_norm(0, m.color_pref/2);
-		//m.wall_discouragement += rand_norm(0, m.wall_discouragement/2);
-		//m.eye_white_scale += rand_norm(0, m.eye_white_scale/3);
-		//m.pupil_scale += rand_norm(0, m.pupil_scale/3);
-		m = perturb_genome(m, base_perturb_scale(), base_bounds())
-    }
+
+	m = perturb_genome(base_phenotype(), base_perturb_scale(), base_bounds())
     
     // RGB components of its color.
     r = random(255);
@@ -53,20 +41,17 @@ if (!initialized) {
 	// Amount of energy required before a birth will occur.
 	birthing_threshold =  21000;
 	// The highest amount of energy it can have stored.
-	max_energy = 4 /*3*/ * m.starting_energy;
+	max_energy = 4 * m.starting_energy;
 
 	energy = m.starting_energy;
 	image_blend = make_colour_rgb(r, g, b);
 	phy_rotation = random(360);
 	initialized = true;
 
-	// How large of a bite is taken. TODO: Proportional to the area.
-	bite_scale = area / 200; //1
+	// How large of a bite is taken. Proportional to the area.
+	bite_scale = area / 200;
 
 	tail_frame = 0;
 	tail_frame_length = 20;
 	tail_frame_progress = 0;
 }
-
-/* */
-/*  */
