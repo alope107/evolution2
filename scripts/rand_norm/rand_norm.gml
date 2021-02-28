@@ -1,9 +1,3 @@
-function rand_norm(argument0, argument1) {
-	mu = argument0
-	sigma = argument1
-
-	return sigma * sqrt(-2 * ln(random(1))) * cos(2 * pi * random(1)) + mu
-
-
-
+function rand_norm(mu, sigma) {
+	return sigma * sqrt(-2 * ln(random(1))) * cos(2 * pi * random(1)) + mu;
 }

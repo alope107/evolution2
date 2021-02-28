@@ -1,5 +1,10 @@
 if (!isChild && !initialized) {
     body_coord = [random_triangle(32, 15)];
+	
+	// TODO: Make dynamic
+	for (var i = 3; i < global.max_vertices; i++) {
+		body_coord[i-2] = extra_triangle(body_coord, 32, 15);
+	}
 
 	m = perturb_genome(base_phenotype(), base_perturb_scale(), base_bounds())
     
