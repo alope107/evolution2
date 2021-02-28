@@ -1,10 +1,10 @@
 /** 
  * @function create_chaser_fix
- * @param {array} body_coord 2D array of coordinates of vertices
+ * @param {array} poly_coord 2D array of coordinates of vertices
  * (must be ordered clockwise and be non-concave)
 */
-function create_chaser_fix(body_coord){
-	var fix = create_polygon_fix(body_coord);
+function create_chaser_fix(poly_coord){
+	var fix = create_polygon_fix(poly_coord);
 	var params = chaser_fix_params();
     
 	physics_fixture_set_density(fix, params.density);

@@ -4,10 +4,9 @@
 */
 function flatten(arr){
 	show_debug_message(string(arr));
-	show_debug_message("ahom");
 	var new_arr = [];
-	for (var i = 0; i < array_length(arr); i++) {
-		for(var j = 0; j < array_length(arr[i]); j++) {
+	for (var i = 0; i < len(arr); i++) {
+		for(var j = 0; j < len(arr[i]); j++) {
 			append(new_arr, arr[i][j]);
 		}
 	}
@@ -16,7 +15,6 @@ function flatten(arr){
 }
 
 function append(arr, val) {
-	show_debug_message("ahem");
 	arr[@ array_length(arr)] = val;
 }
 
@@ -25,3 +23,22 @@ function unique(arr) {
 	return set.to_array();
 }
 
+function sum(arr) {
+	var total = 0;
+	for(var i = 0; i < len(arr); i++) {
+		total += arr[i];
+	}
+	return total;
+}
+
+function map(arr, f) {
+	var new_arr = []
+	for (var i = 0; i < len(arr); i++) {
+		new_arr[i] = f(arr[i]);
+	}
+	return new_arr;
+}
+
+function len(arr) {
+	return array_length(arr);
+}

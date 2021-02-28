@@ -1,10 +1,12 @@
-function triangle_incenter(argument0, argument1) {
+function triangle_incenter(triangle, side_lengths) {
 	// Returns the incenter of the triangle.
 
-	var triangle, sides, perimeter, incenter, side_lengths;
-
-	triangle = argument0;
-	side_lengths = argument1;
+	var sides, perimeter, incenter;
+	
+	print("INCENTER");
+	
+	print(triangle, side_lengths);
+	
 
 	incenter[0] = 0;
 	incenter[1] = 0;

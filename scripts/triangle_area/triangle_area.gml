@@ -1,6 +1,6 @@
 function triangle_area(argument0) {
 	// Returns the area of the triangle given the coordinates of its vertices.
-	var points;
+	var points, area;
 
 	points = argument0;
 
@@ -11,7 +11,4 @@ function triangle_area(argument0) {
 	area = abs(area);
 
 	return area;
-
-
-
 }

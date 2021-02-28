@@ -1,5 +1,5 @@
 if (!isChild && !initialized) {
-    body_coord = random_triangle(32, 15);
+    body_coord = [random_triangle(32, 15)];
 
 	m = perturb_genome(base_phenotype(), base_perturb_scale(), base_bounds())
     
@@ -13,27 +13,25 @@ if (!isChild && !initialized) {
 }
 
 if (!initialized) {
-	//fix = create_polygon_fix(body_coord);
-    
-	//physics_fixture_set_density(fix, .3);
-	//physics_fixture_set_restitution(fix, 1);
-	//physics_fixture_set_collision_group(fix, 0);
-	//physics_fixture_set_linear_damping(fix, 1.2);
-	//physics_fixture_set_angular_damping(fix, .5);
-	//physics_fixture_set_friction(fix, .01);
-	
-	var fix = create_chaser_fix(body_coord);
-	bound_fix = physics_fixture_bind(fix, self);
-	physics_fixture_delete(fix);
+	bound_fix = []
+	area = []
+	for(var i = 0; i < array_length(body_coord); i++) {
+		print(body_coord[i]);
+		var fix = create_chaser_fix(body_coord[i]);
+		bound_fix[i] = physics_fixture_bind(fix, self);
+		physics_fixture_delete(fix);
+		
+		area[i] = triangle_area(body_coord[i]);
+		inradius[i] = triangle_inradius(body_coord[i]);
+		side_lengths[i] = triangle_side_lengths(body_coord[i]);
 
-	area = triangle_area(body_coord);
-	inradius = triangle_inradius(body_coord);
-	side_lengths = triangle_side_lengths(body_coord);
+		tail_loc[i] = tail_coord(body_coord[i]);
+		
+		white_radius[i] = m.eye_white_scale * inradius[i];
+		pupil_radius[i] = m.pupil_scale * white_radius[i];
+	}
 
-	tail_loc = tail_coord(body_coord);
-
-	white_radius = m.eye_white_scale * inradius;
-	pupil_radius = m.pupil_scale * white_radius;
+	total_area = sum(area)
 
 	// Basal metabolic rate - rate at which energy will decrease when at rest.
 	basal = 10;
@@ -50,7 +48,7 @@ if (!initialized) {
 	initialized = true;
 
 	// How large of a bite is taken. Proportional to the area.
-	bite_scale = area / 200;
+	bite_scale = total_area / 200;
 
 	tail_frame = 0;
 	tail_frame_length = 20;
