@@ -32,7 +32,7 @@ function sum(arr) {
 }
 
 function map(arr, f) {
-	var new_arr = []
+	var new_arr = [];
 	for (var i = 0; i < len(arr); i++) {
 		new_arr[i] = f(arr[i]);
 	}
@@ -41,4 +41,24 @@ function map(arr, f) {
 
 function len(arr) {
 	return array_length(arr);
+}
+
+function deep_array_copy(arr) {
+	var new_arr = [];
+	for (var i = 0; i < len(arr); i++) {
+		if(is_array(arr[i])) {
+			new_arr[i] = deep_array_copy(arr[i]);
+		} else {
+			new_arr[i] = arr[i];
+		}
+	}
+	return new_arr;
+}
+
+function slice(arr, first, last) {
+	var new_arr = [];
+	for (var i = first; i < last; i++) {
+		append(new_arr, arr[i]);
+	}
+	return new_arr;
 }

@@ -20,6 +20,7 @@
     {"id":{"name":"create_skew_traingle_fix","path":"scripts/create_skew_traingle_fix/create_skew_traingle_fix.yy",},"order":5,},
     {"id":{"name":"create_polygon_fix","path":"scripts/create_polygon_fix/create_polygon_fix.yy",},"order":7,},
     {"id":{"name":"rand_norm","path":"scripts/rand_norm/rand_norm.yy",},"order":1,},
+    {"id":{"name":"vertices_to_triangles","path":"scripts/vertices_to_triangles/vertices_to_triangles.yy",},"order":5,},
     {"id":{"name":"color_similarity","path":"scripts/color_similarity/color_similarity.yy",},"order":3,},
     {"id":{"name":"normalize_degrees","path":"scripts/normalize_degrees/normalize_degrees.yy",},"order":5,},
     {"id":{"name":"genome_params","path":"scripts/genome_params/genome_params.yy",},"order":1,},
