@@ -23,7 +23,6 @@ if (!initialized) {
 	bound_fix = [];
 	area = [];
 	for(var i = 0; i < array_length(body_coord); i++) {
-		print(body_coord[i]);
 		var fix = create_chaser_fix(body_coord[i]);
 		bound_fix[i] = physics_fixture_bind(fix, self);
 		physics_fixture_delete(fix);
