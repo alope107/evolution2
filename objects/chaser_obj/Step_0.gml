@@ -87,9 +87,11 @@ if (initialized) {
 
 		child.m = perturb_genome(m, child_perturb_scale(), child_bounds());
         
-        child.body_coord = map(body_coord, function(coord) {
-			return mutate_triangle(coord, 9, 15);
-		});
+        //child.body_coord = map(body_coord, function(coord) {
+		//	return mutate_triangle(coord, 9, 15);
+		//});
+		
+		child.vertices = mutate_vertices(vertices, 9, 15);
         
         color_variation = 10;
         child.r = r + max(min(rand_norm(0, color_variation), 255), 0);

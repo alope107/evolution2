@@ -81,6 +81,7 @@
     {"id":{"name":"chaser_obj","path":"objects/chaser_obj/chaser_obj.yy",},"order":11,},
     {"id":{"name":"feeder_obj","path":"objects/feeder_obj/feeder_obj.yy",},"order":15,},
     {"id":{"name":"multitouch_control_obj","path":"objects/multitouch_control_obj/multitouch_control_obj.yy",},"order":24,},
+    {"id":{"name":"mutate_vertices","path":"scripts/mutate_vertices/mutate_vertices.yy",},"order":5,},
     {"id":{"name":"diffusion_control_obj","path":"objects/diffusion_control_obj/diffusion_control_obj.yy",},"order":17,},
     {"id":{"name":"background_clearer","path":"objects/background_clearer/background_clearer.yy",},"order":25,},
     {"id":{"name":"debugger_obj","path":"objects/debugger_obj/debugger_obj.yy",},"order":19,},

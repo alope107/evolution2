@@ -1,14 +1,11 @@
 if (!isChild && !initialized) {
 	vertices = random_triangle(32, 15);
-    //body_coord = [vertices];
 	
-	// TODO: Make dynamic
+	// TODO: Make dynamic based on genes
 	for (var i = 3; i < global.max_vertices; i++) {
 		var triangle_data = extra_triangle(vertices, 32, 15);
 		vertices[i] = triangle_data.new_point;
 	}
-	
-	body_coord = vertices_to_triangles(vertices);
 
 	m = perturb_genome(base_phenotype(), base_perturb_scale(), base_bounds())
     
@@ -22,8 +19,9 @@ if (!isChild && !initialized) {
 }
 
 if (!initialized) {
-	bound_fix = []
-	area = []
+	body_coord = vertices_to_triangles(vertices);
+	bound_fix = [];
+	area = [];
 	for(var i = 0; i < array_length(body_coord); i++) {
 		print(body_coord[i]);
 		var fix = create_chaser_fix(body_coord[i]);
@@ -40,7 +38,7 @@ if (!initialized) {
 		pupil_radius[i] = m.pupil_scale * white_radius[i];
 	}
 
-	total_area = sum(area)
+	total_area = sum(area);
 
 	// Basal metabolic rate - rate at which energy will decrease when at rest.
 	basal = 10;

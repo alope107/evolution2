@@ -1,33 +1,22 @@
-function inner_angles(argument0) {
+function inner_angles(triangle) {
 	// Returns the inner angles of a triangle (in degrees) given the coordinates.
 	// The coordinates oughta be passed as a 2D array.
-	var triangle, sides, i, j, angles, numerator, denominator;
+	var angles = [];
 
-	triangle = argument0;
-
-	sides = triangle_side_lengths(triangle);
-	/*// Get the side lengths.
-	for (i = 0; i < 3; i++) {
-	    j = (i + 1) mod 3;
-	    sides[i] = point_distance(triangle[i, 0], triangle[i, 1], 
-	                              triangle[j, 0], triangle[j, 1]);
-	}*/
+	var sides = triangle_side_lengths(triangle);
 
 	// Use the sides to get the angles.
-	for (i = 0; i < 3; i++) {
+	for (var i = 0; i < 3; i++) {
 	    // Selects each of the 3 sides, but cycles the order.
-	    a = sides[i]
-	    b = sides[(i + 1) mod 3];
-	    c = sides[(i + 2) mod 3];
+	    var a = sides[i];
+	    var b = sides[(i + 1) mod 3];
+	    var c = sides[(i + 2) mod 3];
     
-	    numerator = b*b + c*c - a*a
-	    denominator = 2*b*c;
+	    var numerator = b*b + c*c - a*a;
+	    var denominator = 2*b*c;
 	    angles[i] = darccos(numerator / denominator);
 	    angles[i] = normalize_degrees(angles[i]);
 	}
 
 	return angles;
-
-
-
 }

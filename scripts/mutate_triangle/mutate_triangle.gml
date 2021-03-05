@@ -1,7 +1,7 @@
 function mutate_triangle(triangle, std_dev_mod, min_angle) {
 	// Mutates a given triangle.
 	// Adds normal noise with the given standard deviation modifier.
-	// Ensures that the smallest angle is at least the gien number of degrees.
+	// Ensures that the smallest angle is at least the given number of degrees.
 	// Returns the points in clockwise order and with the centroid at the origin.
 
 	var mut_triangle, valid, angles;
@@ -14,8 +14,16 @@ function mutate_triangle(triangle, std_dev_mod, min_angle) {
 	                                 rand_norm(0, triangle[i, j] / std_dev_mod);
 	        }
 	    }
-	    angles = inner_angles(mut_triangle);
-	    valid = true;
+		valid = true;
+		try {
+			angles = inner_angles(mut_triangle);
+		} catch (_exception) {
+			// Some issues (e.g. collinear points) will cause inner_angles
+			// to throw an exception. If this happens, it's not a valid triangle.
+			valid = false;
+			continue;
+		}
+	    
 	    for (i= 0; i < 3; i++) {
 	        valid = valid && (angles[i] >= min_angle); 
 	    }
