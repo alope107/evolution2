@@ -7,14 +7,8 @@ if(enabled) {
 		x_pos += col_size;
 		draw_sprite(icons[i], 0, x_pos, v_pad);
 		if(icons[i] == selected) {
-			var box_length = max(sprite_get_width(selected), sprite_get_height(selected)) * box_ratio;
-			draw_set_color(c_white);
-			draw_rectangle(x_pos - (box_length/2), v_pad - (box_length/2),
-						   x_pos + (box_length/2), v_pad + (box_length/2),
-						   true);
+			var box = boxes[i];
+			draw_rectangle_outline(box[0], box[1], c_red, 3);
 		}
 	}
 }
-
-//draw_set_color(c_red);
-//draw_circle(40, 40, 20, true);
