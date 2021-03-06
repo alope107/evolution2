@@ -17,7 +17,6 @@
     {"id":{"name":"file_text_read_all","path":"scripts/file_text_read_all/file_text_read_all.yy",},"order":1,},
     {"id":{"name":"get_food_fixture","path":"scripts/get_food_fixture/get_food_fixture.yy",},"order":1,},
     {"id":{"name":"create_triangle_fix","path":"scripts/create_triangle_fix/create_triangle_fix.yy",},"order":3,},
-    {"id":{"name":"create_skew_traingle_fix","path":"scripts/create_skew_traingle_fix/create_skew_traingle_fix.yy",},"order":5,},
     {"id":{"name":"create_polygon_fix","path":"scripts/create_polygon_fix/create_polygon_fix.yy",},"order":7,},
     {"id":{"name":"rand_norm","path":"scripts/rand_norm/rand_norm.yy",},"order":1,},
     {"id":{"name":"vertices_to_triangles","path":"scripts/vertices_to_triangles/vertices_to_triangles.yy",},"order":5,},
