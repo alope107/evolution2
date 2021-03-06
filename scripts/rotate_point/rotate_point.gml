@@ -1,14 +1,13 @@
-function rotate_point(argument0, argument1, argument2) {
+function rotate_point(x_pt, y_pt, theta) {
 	// Rotates a point by theta degrees.
 
-	var x_pt, y_pt, theta, new_point;
+	var new_point;
+	var cosine = dcos(theta);
+	var sine = dsin(theta);
+	
 
-	x_pt = argument0;
-	y_pt = argument1;
-	theta = argument2; // How many degrees to rotate (counter-clockwise) by in degrees.
-
-	new_point[0] = x_pt * dcos(theta) - y_pt * dsin(theta);
-	new_point[1] = y_pt * dcos(theta) + x_pt * dsin(theta);
+	new_point[0] = x_pt * cosine - y_pt * sine;
+	new_point[1] = y_pt * cosine + x_pt * sine;
 
 	return new_point;
 }

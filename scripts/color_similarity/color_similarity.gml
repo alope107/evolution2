@@ -8,10 +8,9 @@ function color_similarity(obj0, obj1) {
 	//	return global.similarity_cache.get(_key);
 	//}
 
-	var r_comp = power(abs(obj0.r - obj1.r), 2);
-	var g_comp = power(abs(obj0.g - obj1.g), 2);
-	var b_comp = power(abs(obj0.b - obj1.b), 2);
-	var color_dist = power(r_comp + g_comp + b_comp , .333);
+
+	var color_dist = point_distance_3d(obj0.r, obj0.g, obj0.b,
+									   obj1.r, obj1.g, obj1.b);
 	var color_sim = (global.unit_length - color_dist) / global.unit_length;
 
 	// TODO: Re-enable cache?
