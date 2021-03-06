@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"wall_spr","path":"sprites/wall_spr/wall_spr.yy",},
     "resourceVersion": "1.3",
-    "name": "wall_spr",
+    "name": "",
     "tags": [],
     "resourceType": "GMSequence",
   },
