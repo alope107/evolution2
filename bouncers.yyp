@@ -85,6 +85,7 @@
     {"id":{"name":"background_clearer","path":"objects/background_clearer/background_clearer.yy",},"order":25,},
     {"id":{"name":"debugger_obj","path":"objects/debugger_obj/debugger_obj.yy",},"order":19,},
     {"id":{"name":"camera_obj","path":"objects/camera_obj/camera_obj.yy",},"order":21,},
+    {"id":{"name":"gui_obj","path":"objects/gui_obj/gui_obj.yy",},"order":29,},
     {"id":{"name":"arrays","path":"scripts/arrays/arrays.yy",},"order":2,},
     {"id":{"name":"camera_tank","path":"rooms/camera_tank/camera_tank.yy",},"order":1,},
     {"id":{"name":"weld_test_room","path":"rooms/weld_test_room/weld_test_room.yy",},"order":14,},
