@@ -1,6 +1,5 @@
 if (initialized) {
 	// Draws all triangles
-	// TODO: handle rotation for non-centered triangles
 	for(var j = 0; j < len(body_coord); j++) {
 	    area_ratio = 1000
 		if (j == 0) {

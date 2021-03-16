@@ -3,22 +3,20 @@
  * @param {type} name
 */
 function Set(_initial) constructor{
-	show_debug_message("ruhroh");
 	_map = {}
 	for (var i =0; i < array_length(_initial); i++) {
 		variable_struct_set(_map, string(_initial[i]), _initial[i]);
 	}
-	show_debug_message("cutblow");
 	add = function(_val) {
-		variable_struct_set(_map, string(val), val);
+		variable_struct_set(_map, string(_val), _val);
 	}
 	
 	contains = function(_val) {
-		return variable_struct_exists(_map, string(val));
+		return variable_struct_exists(_map, string(_val));
 	};
 	
 	remove = function(_val) {
-		variable_struct_remove(_map, string(val));
+		variable_struct_remove(_map, string(_val));
 	}
 	
 	to_array = function() {	
@@ -30,8 +28,4 @@ function Set(_initial) constructor{
 		}
 		return new_arr;
 	}
-	
-	//toString = function() {
-	//	return string(to_array());
-	//}
 }
