@@ -2,7 +2,7 @@
   "resources": [
     {"id":{"name":"bouncer_spr","path":"sprites/bouncer_spr/bouncer_spr.yy",},"order":1,},
     {"id":{"name":"consts","path":"scripts/consts/consts.yy",},"order":0,},
-    {"id":{"name":"unique_lines","path":"scripts/unique_lines/unique_lines.yy",},"order":11,},
+    {"id":{"name":"line_segments","path":"scripts/line_segments/line_segments.yy",},"order":11,},
     {"id":{"name":"cache","path":"scripts/cache/cache.yy",},"order":0,},
     {"id":{"name":"wall_spr","path":"sprites/wall_spr/wall_spr.yy",},"order":3,},
     {"id":{"name":"chaser_spr","path":"sprites/chaser_spr/chaser_spr.yy",},"order":5,},
@@ -26,7 +26,7 @@
     {"id":{"name":"genome_params","path":"scripts/genome_params/genome_params.yy",},"order":1,},
     {"id":{"name":"draw_rectangle_outline","path":"scripts/draw_rectangle_outline/draw_rectangle_outline.yy",},"order":2,},
     {"id":{"name":"draw_rectangle_fast","path":"scripts/draw_rectangle_fast/draw_rectangle_fast.yy",},"order":1,},
-    {"id":{"name":"unique_lines_test","path":"scripts/unique_lines_test/unique_lines_test.yy",},"order":4,},
+    {"id":{"name":"lines_test","path":"scripts/lines_test/lines_test.yy",},"order":4,},
     {"id":{"name":"rotate_point","path":"scripts/rotate_point/rotate_point.yy",},"order":1,},
     {"id":{"name":"sort_clockwise","path":"scripts/sort_clockwise/sort_clockwise.yy",},"order":3,},
     {"id":{"name":"wall_grey_spr","path":"sprites/wall_grey_spr/wall_grey_spr.yy",},"order":20,},

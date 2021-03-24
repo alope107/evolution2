@@ -20,6 +20,20 @@ if (!isChild && !initialized) {
 
 if (!initialized) {
 	body_coord = vertices_to_triangles(vertices);
+	
+	var all_lines = [];
+	for(var i=0; i< len(body_coord); i++) {
+		var triangle = body_coord[i];
+		for(var j=0; j <3; j++) {
+			for(var k=j+1; k<3; k++) {
+				append(all_lines, [[triangle[j][0], triangle[j][1]],
+									[triangle[k][0], triangle[k][1]]]);
+			}
+		}
+	}
+	
+	deduped_lines = unrepeated_lines(all_lines);
+	
 	bound_fix = [];
 	area = [];
 	for(var i = 0; i < array_length(body_coord); i++) {

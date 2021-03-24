@@ -11,9 +11,6 @@ function arr_cmp_test(){
 function one_d_equal() {
 	var a1 = [1, 2, 3];
 	var a2 = [1, 2, 3];
-	print("---------------");
-	print(global.arr_cmp(a1, a2));
-	print("~~~~~~~~~~~~~~~");
 	assert_equal(0, global.arr_cmp(a1, a2), "Equal 1d arrays should compare to 0");
 }
 

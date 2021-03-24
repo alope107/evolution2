@@ -7,4 +7,4 @@ triangle_incenter_test();
 triangle_area_test();
 tail_coord_test();
 arr_cmp_test();
-unique_lines_test();
+line_segments_test();

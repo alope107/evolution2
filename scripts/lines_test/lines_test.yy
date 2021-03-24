@@ -6,7 +6,7 @@
     "path": "folders/Scripts/tests/geometry.yy",
   },
   "resourceVersion": "1.0",
-  "name": "unique_lines_test",
+  "name": "lines_test",
   "tags": [],
   "resourceType": "GMScript",
 }

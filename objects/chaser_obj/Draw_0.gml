@@ -1,4 +1,5 @@
 if (initialized) {
+	var all_lines = [];
 	// Draws all triangles
 	for(var j = 0; j < len(body_coord); j++) {
 	    area_ratio = 1000
@@ -30,9 +31,15 @@ if (initialized) {
 	    draw_set_colour(c_black);
     
 	    // Draw outline
-	    draw_triangle(x + rotated_body[0, 0], y + rotated_body[0, 1],
-	                    x + rotated_body[1, 0], y + rotated_body[1, 1],
-	                    x + rotated_body[2, 0], y + rotated_body[2, 1], true);
+	    //draw_triangle(x + rotated_body[0, 0], y + rotated_body[0, 1],
+	    //                x + rotated_body[1, 0], y + rotated_body[1, 1],
+	    //                x + rotated_body[2, 0], y + rotated_body[2, 1], true);
+		for(var i=0; i <3; i++) {
+			for(var k=i+1; k<3; k++) {
+				append(all_lines, [[rotated_body[i][0], rotated_body[i][1]],
+								   [rotated_body[k][0], rotated_body[k][1]]]);
+			}
+		}
                     
 	    if (chosen) {
 	        draw_set_colour(c_red);
@@ -64,6 +71,18 @@ if (initialized) {
 		    draw_set_colour(c_black);
 		    draw_circle(x + white_offset[0] + pupil_offset[0], y + white_offset[1] + pupil_offset[1], pupil_radius[j], false);
 		}
+	}
+	
+	
+	// Draw only exterior lines
+	for (var j = 0; j < len(deduped_lines); j++) {
+		var line = deduped_lines[j];
+		var start = line[0];
+		var finish = line[1];
+		var rotated_start = rotate_point(start[0], start[1], phy_rotation);
+		var rotated_finish = rotate_point(finish[0], finish[1], phy_rotation);
+		draw_line(x + rotated_start[0], y + rotated_start[1],
+				  x + rotated_finish[0], y + rotated_finish[1]);
 	}
                  
     draw_set_alpha(1);

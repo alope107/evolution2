@@ -8,7 +8,7 @@ timer = interval;
 // TEST FLAGS
 global.cannibals = false;
 global.controlling = false;
-global.max_vertices = 3;
+global.max_vertices = 5;
 
 // DEBUG FLAGS
 global.draw_physics = false;

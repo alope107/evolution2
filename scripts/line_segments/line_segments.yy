@@ -6,7 +6,7 @@
     "path": "folders/Scripts/geometry.yy",
   },
   "resourceVersion": "1.0",
-  "name": "unique_lines",
+  "name": "line_segments",
   "tags": [],
   "resourceType": "GMScript",
 }
