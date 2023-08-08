@@ -54,7 +54,8 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
   ],
   "IncludedFiles": [
-    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"base_genome.json","CopyToMask":9223372036854775807,"filePath":"datafiles",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"base_genome.json","CopyToMask":0,"filePath":"datafiles/config",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"README.txt.txt","CopyToMask":-1,"filePath":"datafiles/config",},
   ],
   "isEcma": false,
   "LibraryEmitters": [],

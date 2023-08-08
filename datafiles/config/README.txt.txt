@@ -1,0 +1,1 @@
+The files in this folder are not currently used! However, they will eventually be where all configuration data is stored so you can perform light mods to the game easily :)
