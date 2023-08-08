@@ -1,8 +1,8 @@
 /** 
  * @function perturb_genome
- * @param {genome} Struct of genetic values
- * @param {factors} Struct of perturb ratios
- * @ param {bounds} Struct of names to stuct with minimum/maximum vals
+ * @param {genome} genome Struct of genetic values
+ * @param {factors} factors Struct of perturb ratios
+ * @param {bounds}  bounds Struct of names to stuct with minimum/maximum vals
  * @description Returns a randomly modfied genome.
  * The random values are sample from a normal distribution centered
  * at the old value and with a standard deviation of old_value * perturb_factor.
